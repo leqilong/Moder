@@ -18,7 +18,7 @@ extension UIImage{
         imageView.layer.masksToBounds = true
         UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, false, scale)
         guard let context = UIGraphicsGetCurrentContext() else {return nil}
-        imageView.layer.renderInContext(context)
+        imageView.layer.render(in: context)
         let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return result
